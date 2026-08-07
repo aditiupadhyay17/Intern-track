@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InternTrack — Internship Application Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>InternTrack</h1>
+    <p>Keep every internship application in one place</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2 id="form-title">Add Application</h2>
+      <form id="application-form">
+        <input type="hidden" id="app-id" />
+
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" required placeholder="e.g. Google" />
+
+        <label for="role">Role</label>
+        <input type="text" id="role" required placeholder="e.g. SDE Intern" />
+
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="APPLIED">Applied</option>
+          <option value="OA_ROUND">OA Round</option>
+          <option value="INTERVIEW">Interview</option>
+          <option value="OFFER">Offer</option>
+          <option value="REJECTED">Rejected</option>
+        </select>
+
+        <label for="dateApplied">Date Applied</label>
+        <input type="date" id="dateApplied" />
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" rows="2" placeholder="Referral, interview rounds, links..."></textarea>
+
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Add Application</button>
+          <button type="button" id="cancel-btn" class="hidden">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Your Applications</h2>
+      <div id="status-message"></div>
+      <table id="applications-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Date Applied</th>
+            <th>Notes</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="applications-body">
+          <!-- Rows injected by script.js -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
