@@ -1,0 +1,15 @@
+### Get all applications
+GET http://localhost:8080/api/applications
+
+
+### Create an application
+POST http://localhost:8080/api/applications
+Content-Type: application/json
+
+{
+  "companyName": "TCS",
+  "role": "Software Developer",
+  "status": "APPLIED",
+  "dateApplied": "2026-08-13",
+  "notes": "Test application"
+}
