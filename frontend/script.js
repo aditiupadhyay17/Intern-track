@@ -1,5 +1,5 @@
 // Change this if your Spring Boot backend runs on a different host/port
-const API_BASE = "https://interntrack-backend-1x5c.onrender.com/api/applications";
+const API_BASE = "https://interntrack-backend-lx5c.onrender.com/api/applications";
 
 const form = document.getElementById("application-form");
 const tableBody = document.getElementById("applications-body");
